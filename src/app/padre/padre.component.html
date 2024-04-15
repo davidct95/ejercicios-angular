@@ -1,0 +1,77 @@
+<h1>Hola mundo Angular</h1>
+
+<!-- Ejercicio 01 -->
+<h2>Ejercico Contador</h2>
+
+<button (click)="incrementar()">Incrementar</button>
+<button (click)="decrementar()">Decrementar</button>
+<p>Contador: {{ contador }}</p>
+
+<!-- Ejercicio 02 -->
+
+<h2>Ejercico Saludo : Interpolacion</h2>
+<p>Hola, {{ nombre }}</p>
+
+<!-- Ejercicio 03 -->
+
+<h2>Ejercico cambio de imagen : Binding Propiedades</h2>
+<img [src]="imagen">
+<br>
+<button (click) = "cambiarImagen()">Cambiar Imagen</button>
+
+<!-- Ejercicio 04 -->
+
+<h2>Ejercicio Activar Alerta : Binding de eventos</h2>
+
+<button (click)="onClick()">Has clic aquí</button>
+
+<!-- Ejercicio 05 -->
+
+<h2>Ejercicio Cambiar el nombre del Ejercicio 02: Binding Bidreccional</h2>
+
+<input type="text" [(ngModel)]="nombre" />
+
+<!-- Ejercicio 06 -->
+
+<h2>Binding de clases : cambiar clase</h2>
+
+<div [class] = "clase"> {{ clase }}</div>
+<button (click)="cambiarClase()">Cambiar clase</button>
+
+<!-- Ejercicio 07 -->
+
+<h2>Binding Estilos</h2>
+<div [style] = "estilo">Hola</div>
+<button (click)="cambiarEstilo()">Cambiar Estilo</button>
+
+<!-- Ejercicio 08 -->
+<h2>Pipes : Mostrando fecha</h2>
+<div>{{ fecha | date:'dd/MM/yy'}}</div>
+
+<!-- Ejercicio 09 -->
+<h2>NgIf : condicional</h2>
+<div *ngIf = "condition">Este mensaje se muestra si la condición es verdadera</div>
+
+<!-- Ejercicio 10 -->
+<h2>NgFor</h2>
+<ul>
+    <li *ngFor = "let item of items">
+        {{item}}
+    </li>
+</ul>
+
+<!-- Ejercicio 11 -->
+<h2>Ejercicio input y output</h2>
+<h3>{{titulo}}</h3>
+
+<app-hijo [titulo]="titulo" [mensaje]="mensaje" (enviarEvento)="recibirMensaje($event)" (incrementar)="incrementar()" (decrementar)="decrementar()"></app-hijo>
+
+<!--Servicios-->
+
+<h2>Comunicación por medio de servicios</h2>
+
+<h3>{{nombreHermanoGrande}}</h3>
+<button type="button" (click)="saludar()">Saludar</button>
+
+<button type="button" (click)="preguntar()">Preguntar</button>
+

@@ -1,0 +1,13 @@
+<h2>Yo soy el hijo</h2>
+<h3>{{titulo}}</h3>
+<p>{{mensaje}}</p>
+
+<button (click)="enviarMensaje()">Enviar Mensaje al Padre</button>
+
+<h2>Botones desde el hijo</h2>
+<p>
+    Nota: Estos botones solo envian el llamado del evento pero el componente padre los implementa.
+</p>
+
+<button (click)="incrementarHijo()">Incrementar</button>
+<button (click)="decrementarHijo()">Decrementar</button>

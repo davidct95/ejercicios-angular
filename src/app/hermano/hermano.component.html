@@ -1,0 +1,25 @@
+<!-- Ejemplo de servicio : saludando al hermano grande -->
+<h3>{{nombreHermanoPequeno}}</h3>
+<button type="button" (click)="saludar()">Saludar</button>
+<button type="button" (click)="preguntar()">Preguntar</button>
+
+<!-- Directivas -->
+
+<h2>Usando Directivas : Componente Hermano</h2>
+
+<h3 appEstiloHermanos>{{nombreHermanoPequeno}}</h3>
+
+<!-- Pipes -->
+
+<h2>Usando Pipes Personalizados : Componente Hermano</h2>
+
+<h3>{{nombre2 | miPipePersonalizado}}</h3>
+
+<!-- Pipe por defecto de angular revisar documentación -->
+<h3>Fecha de hoy : {{fecha | date:'short'}}</h3> 
+
+<h3>Cuanto cotiza el dolar: {{dolar | currency}}</h3>
+
+<h3>Valor de Pi: {{pi | number:'1.2-2'}}</h3>
+
+<h3>El porcentaje es: {{factor | percent}}</h3>
